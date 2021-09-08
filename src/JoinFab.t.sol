@@ -1,15 +1,15 @@
 // SPDX-License-Identifier: GPL-3.0-or-later
-pragma solidity ^0.8.6;
+pragma solidity >=0.5.12;
 
 import "ds-test/test.sol";
 
-import "./Joinfab.sol";
+import "./JoinFab.sol";
 
-contract JoinfabTest is DSTest {
-    Joinfab joinfab;
+contract JoinFabTest is DSTest {
+    JoinFab joinFab;
 
     function setUp() public {
-        joinfab = new Joinfab();
+        joinFab = new JoinFab();
     }
 
     function testFail_basic_sanity() public {
