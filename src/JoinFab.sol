@@ -33,54 +33,54 @@ contract JoinFab {
         vat = _vat;
     }
 
-    function newGemJoin(address _owner, bytes32 _ilk, address _gem) external returns (address gemJoin) {
-        gemJoin = address(new GemJoin(vat, _ilk, _gem));
-        authOwner(_owner, gemJoin);
+    function newGemJoin(address _owner, bytes32 _ilk, address _gem) external returns (address join) {
+        join = address(new GemJoin(vat, _ilk, _gem));
+        authOwner(_owner, join);
     }
 
-    function newGemJoin2(address _owner, bytes32 _ilk, address _gem) external returns (address gemJoin) {
-        gemJoin = address(new GemJoin2(vat, _ilk, _gem));
-        authOwner(_owner, gemJoin);
+    function newGemJoin2(address _owner, bytes32 _ilk, address _gem) external returns (address join) {
+        join = address(new GemJoin2(vat, _ilk, _gem));
+        authOwner(_owner, join);
     }
 
-    function newGemJoin3(address _owner, bytes32 _ilk, address _gem, uint256 _dec) external returns (address gemJoin) {
-        gemJoin = address(new GemJoin3(vat, _ilk, _gem, _dec));
-        authOwner(_owner, gemJoin);
+    function newGemJoin3(address _owner, bytes32 _ilk, address _gem, uint256 _dec) external returns (address join) {
+        join = address(new GemJoin3(vat, _ilk, _gem, _dec));
+        authOwner(_owner, join);
     }
 
-    function newGemJoin4(address _owner, bytes32 _ilk, address _gem) external returns (address gemJoin) {
-        gemJoin = address(new GemJoin4(vat, _ilk, _gem));
-        authOwner(_owner, gemJoin);
+    function newGemJoin4(address _owner, bytes32 _ilk, address _gem) external returns (address join) {
+        join = address(new GemJoin4(vat, _ilk, _gem));
+        authOwner(_owner, join);
     }
 
-    function newGemJoin5(address _owner, bytes32 _ilk, address _gem) external returns (address gemJoin) {
-        gemJoin = address(new GemJoin5(vat, _ilk, _gem));
-        authOwner(_owner, gemJoin);
+    function newGemJoin5(address _owner, bytes32 _ilk, address _gem) external returns (address join) {
+        join = address(new GemJoin5(vat, _ilk, _gem));
+        authOwner(_owner, join);
     }
 
-    function newGemJoin6(address _owner, bytes32 _ilk, address _gem) external returns (address gemJoin) {
-        gemJoin = address(new GemJoin6(vat, _ilk, _gem));
-        authOwner(_owner, gemJoin);
+    function newGemJoin6(address _owner, bytes32 _ilk, address _gem) external returns (address join) {
+        join = address(new GemJoin6(vat, _ilk, _gem));
+        authOwner(_owner, join);
     }
 
-    function newGemJoin7(address _owner, bytes32 _ilk, address _gem) external returns (address gemJoin) {
-        gemJoin = address(new GemJoin7(vat, _ilk, _gem));
-        authOwner(_owner, gemJoin);
+    function newGemJoin7(address _owner, bytes32 _ilk, address _gem) external returns (address join) {
+        join = address(new GemJoin7(vat, _ilk, _gem));
+        authOwner(_owner, join);
     }
 
-    function newGemJoin8(address _owner, bytes32 _ilk, address _gem) external returns (address gemJoin) {
-        gemJoin = address(new GemJoin8(vat, _ilk, _gem));
-        authOwner(_owner, gemJoin);
+    function newGemJoin8(address _owner, bytes32 _ilk, address _gem) external returns (address join) {
+        join = address(new GemJoin8(vat, _ilk, _gem));
+        authOwner(_owner, join);
     }
 
-    function newAuthGemJoin(address _owner, bytes32 _ilk, address _gem) external returns (address gemJoin) {
-        gemJoin = address(new AuthGemJoin(vat, _ilk, _gem));
-        authOwner(_owner, gemJoin);
+    function newAuthGemJoin(address _owner, bytes32 _ilk, address _gem) external returns (address join) {
+        join = address(new AuthGemJoin(vat, _ilk, _gem));
+        authOwner(_owner, join);
     }
 
-    function authOwner(address _owner, address _gemJoin) internal {
-        GemJoin(_gemJoin).rely(_owner);
-        GemJoin(_gemJoin).deny(address(this));
+    function authOwner(address _owner, address _join) internal {
+        GemJoin(_join).rely(_owner);
+        GemJoin(_join).deny(address(this));
     }
 
 }
