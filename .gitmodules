@@ -4,6 +4,8 @@
 [submodule "lib/dss"]
 	path = lib/dss
 	url = https://github.com/makerdao/dss
+	branch = v1.2
 [submodule "lib/dss-gem-joins"]
 	path = lib/dss-gem-joins
 	url = https://github.com/makerdao/dss-gem-joins
+	branch = dss-v1.2
