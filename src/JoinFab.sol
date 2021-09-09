@@ -16,7 +16,6 @@
 pragma solidity >=0.5.12;
 
 import {GemJoin}        from "dss/join.sol";
-import {DaiJoin}        from "dss/join.sol";
 import {GemJoin2}       from "dss-gem-joins/join-2.sol";
 import {GemJoin3}       from "dss-gem-joins/join-3.sol";
 import {GemJoin4}       from "dss-gem-joins/join-4.sol";
