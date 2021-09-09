@@ -3,13 +3,28 @@ pragma solidity >=0.5.12;
 
 import "ds-test/test.sol";
 
+import "dss/vat.sol";
 import "./JoinFab.sol";
 
+contract MockProxy {
+
+}
+
 contract JoinFabTest is DSTest {
+
+    Vat vat;
+    MockProxy mockProxy;
+
     JoinFab joinFab;
 
     function setUp() public {
-        joinFab = new JoinFab();
+        vat = new Vat();
+        mockProxy = new MockProxy();
+        joinFab = new JoinFab(address(vat));
+    }
+
+    function testVat() public {
+        assertEq(joinFab.vat(), address(vat));
     }
 
     function testFail_basic_sanity() public {
