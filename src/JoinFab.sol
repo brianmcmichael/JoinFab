@@ -13,7 +13,7 @@
 //
 // You should have received a copy of the GNU Affero General Public License
 // along with this program.  If not, see <https://www.gnu.org/licenses/>.
-pragma solidity >=0.5.12;
+pragma solidity 0.5.12;
 
 import {GemJoin}        from "dss/join.sol";
 import {GemJoin2}       from "dss-gem-joins/join-2.sol";
