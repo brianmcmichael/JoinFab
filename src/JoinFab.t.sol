@@ -55,6 +55,11 @@ contract JoinFabTest is DSTest {
         assertEq(joinFab.vat(), address(vat));
     }
 
+    function testDeploy() public {
+        // Approximate deploy cost in test results
+        new JoinFab(address(vat));
+    }
+
     function testGemJoin() public {
         _testJoin(address(joinFab.newGemJoin(address(mockProxy), ilk, address(mockToken))), mockToken.decimals());
     }
