@@ -147,59 +147,59 @@ contract JoinFab {
     event NewJoin(address indexed join, bytes data);
 
     constructor(address _vat) public {
-        vat            = _vat;
-        gemJoinFab     = new GemJoinFab();
-        gemJoin2Fab    = new GemJoin2Fab();
-        gemJoin3Fab    = new GemJoin3Fab();
-        gemJoin4Fab    = new GemJoin4Fab();
-        gemJoin5Fab    = new GemJoin5Fab();
-        gemJoin6Fab    = new GemJoin6Fab();
-        gemJoin7Fab    = new GemJoin7Fab();
-        gemJoin8Fab    = new GemJoin8Fab();
-        authGemJoinFab = new AuthGemJoinFab();
+        vat = _vat;
     }
 
     function newGemJoin(address _owner, bytes32 _ilk, address _gem) external returns (address join) {
+        if (address(gemJoinFab) == address(0)) { gemJoinFab = new GemJoinFab(); }
         join = gemJoinFab.newGemJoin(vat, _owner, _ilk, _gem);
         emit NewJoin(join, abi.encode(vat, _ilk, _gem));
     }
 
     function newGemJoin2(address _owner, bytes32 _ilk, address _gem) external returns (address join) {
+        if (address(gemJoin2Fab) == address(0)) { gemJoin2Fab = new GemJoin2Fab(); }
         join = gemJoin2Fab.newGemJoin2(vat, _owner, _ilk, _gem);
         emit NewJoin(join, abi.encode(vat, _ilk, _gem));
     }
 
     function newGemJoin3(address _owner, bytes32 _ilk, address _gem, uint256 _dec) external returns (address join) {
+        if (address(gemJoin3Fab) == address(0)) { gemJoin3Fab = new GemJoin3Fab(); }
         join = gemJoin3Fab.newGemJoin3(vat, _owner, _ilk, _gem, _dec);
         emit NewJoin(join, abi.encode(vat, _ilk, _gem, _dec));
     }
 
     function newGemJoin4(address _owner, bytes32 _ilk, address _gem) external returns (address join) {
+        if (address(gemJoin4Fab) == address(0)) { gemJoin4Fab = new GemJoin4Fab(); }
         join = gemJoin4Fab.newGemJoin4(vat, _owner, _ilk, _gem);
         emit NewJoin(join, abi.encode(vat, _ilk, _gem));
     }
 
     function newGemJoin5(address _owner, bytes32 _ilk, address _gem) external returns (address join) {
+        if (address(gemJoin5Fab) == address(0)) { gemJoin5Fab = new GemJoin5Fab(); }
         join = gemJoin5Fab.newGemJoin5(vat, _owner, _ilk, _gem);
         emit NewJoin(join, abi.encode(vat, _ilk, _gem));
     }
 
     function newGemJoin6(address _owner, bytes32 _ilk, address _gem) external returns (address join) {
+        if (address(gemJoin6Fab) == address(0)) { gemJoin6Fab = new GemJoin6Fab(); }
         join = gemJoin6Fab.newGemJoin6(vat, _owner, _ilk, _gem);
         emit NewJoin(join, abi.encode(vat, _ilk, _gem));
     }
 
     function newGemJoin7(address _owner, bytes32 _ilk, address _gem) external returns (address join) {
+        if (address(gemJoin7Fab) == address(0)) { gemJoin7Fab = new GemJoin7Fab(); }
         join = gemJoin7Fab.newGemJoin7(vat, _owner, _ilk, _gem);
         emit NewJoin(join, abi.encode(vat, _ilk, _gem));
     }
 
     function newGemJoin8(address _owner, bytes32 _ilk, address _gem) external returns (address join) {
+        if (address(gemJoin8Fab) == address(0)) { gemJoin8Fab = new GemJoin8Fab(); }
         join = gemJoin8Fab.newGemJoin8(vat, _owner, _ilk, _gem);
         emit NewJoin(join, abi.encode(vat, _ilk, _gem));
     }
 
     function newAuthGemJoin(address _owner, bytes32 _ilk, address _gem) external returns (address join) {
+        if (address(authGemJoinFab) == address(0)) { authGemJoinFab = new AuthGemJoinFab(); }
         join = authGemJoinFab.newAuthGemJoin(vat, _owner, _ilk, _gem);
         emit NewJoin(join, abi.encode(vat, _ilk, _gem));
     }
