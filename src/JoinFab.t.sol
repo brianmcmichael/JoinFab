@@ -64,37 +64,9 @@ contract JoinFabTest is DSTest {
         _testJoin(address(joinFab.newGemJoin(address(mockProxy), ilk, address(mockToken))), mockToken.decimals());
     }
 
-    function testGemJoin2() public {
-        _testJoin(address(joinFab.newGemJoin2(address(mockProxy), ilk, address(mockToken))), mockToken.decimals());
-    }
-
-    function testGemJoin3() public {
-        address mockToken3 = address(new MockToken(6));
-        address gemJoin3 = joinFab.newGemJoin3(address(mockProxy), ilk, address(mockToken3), 6);
-        _testJoin(gemJoin3, 6);
-    }
-
-    function testGemJoin4() public {
-        _testJoin(address(joinFab.newGemJoin4(address(mockProxy), ilk, address(mockToken))), mockToken.decimals());
-    }
-
     function testGemJoin5() public {
         address mockToken5 = address(new MockToken(6));
         _testJoin(address(joinFab.newGemJoin5(address(mockProxy), ilk, address(mockToken5))), 6);
-    }
-
-    function testGemJoin6() public {
-        _testJoin(address(joinFab.newGemJoin6(address(mockProxy), ilk, address(mockToken))), mockToken.decimals());
-    }
-
-    function testGemJoin7() public {
-        address mockToken7 = address(new MockToken(6));
-        _testJoin(address(joinFab.newGemJoin7(address(mockProxy), ilk, address(mockToken7))), 6);
-    }
-
-    function testGemJoin8() public {
-        address mockToken8 = address(new MockToken(2));
-        _testJoin(address(joinFab.newGemJoin8(address(mockProxy), ilk, address(mockToken8))), 2);
     }
 
     function testAuthGemJoin() public {
