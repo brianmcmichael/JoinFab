@@ -10,8 +10,8 @@ This repository can deploy the standard `GemJoin` contract for ERC20-compliant t
 
 # Contracts
 
-- Mainnet:
-- Goerli: [0x74893c37beacf205507ea794470b13de06294220](https://goerli.etherscan.io/address/0x74893c37beacf205507ea794470b13de06294220#code)
+- Mainnet:  [0xf1738d22140783707ca71cb3746e0dc7bf2b0264](https://etherscan.io/address/0xf1738d22140783707ca71cb3746e0dc7bf2b0264#code)
+- Goerli: [0xe7988b75a19d8690272d65882ab0d07d492f7002](https://goerli.etherscan.io/address/0xe7988b75a19d8690272d65882ab0d07d492f7002#code)
 
 # Verifying
 
